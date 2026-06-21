@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Privacy Policy — GroceryListing</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #6a6a6a;
+      --accent: #3CB164;
+      --rule: #e5e5e5;
+      --card: #f7f7f7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --fg: #f0f0f0;
+        --muted: #a0a0a0;
+        --accent: #5ED985;
+        --rule: #333333;
+        --card: #242424;
+      }
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    header {
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 40px 0 12px;
+      letter-spacing: -0.01em;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 15px;
+      margin: 0;
+    }
+    p {
+      margin: 0 0 16px;
+    }
+    ul {
+      padding-left: 20px;
+      margin: 0 0 16px;
+    }
+    li {
+      margin-bottom: 12px;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover { text-decoration-thickness: 2px; }
+    strong { font-weight: 600; }
+    .lead {
+      font-size: 18px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+    .callout {
+      background: var(--card);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 24px 0;
+      border-left: 3px solid var(--accent);
+    }
+    footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 14px;
+    }
+    code {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      font-size: 0.92em;
+      background: var(--card);
+      padding: 1px 6px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Privacy Policy</h1>
+      <p class="meta">GroceryListing iOS app &middot; Effective May 3, 2026</p>
+    </header>
+
+    <p class="lead">
+      GroceryListing is built to keep your data on your device. Below is exactly what happens with the information you give it &mdash; what stays local, what passes through Apple, what reaches third parties, and what we (the developer) collect.
+    </p>
+
+    <h2>What stays on your device</h2>
+    <ul>
+      <li>Your stores, items, aisle positions, purchase counts, and the names you've saved for scanned barcodes &mdash; all stored in a local SwiftData database inside this app's sandbox.</li>
+      <li>Camera access &mdash; only used while the barcode scanner is open. Frames are processed on-device by Apple's Vision framework. Nothing is recorded or sent anywhere.</li>
+      <li>App settings (toggles in the Settings tab) &mdash; saved in iOS UserDefaults, scoped to this app.</li>
+    </ul>
+
+    <h2>What goes through Apple</h2>
+    <ul>
+      <li>
+        <strong>iCloud sync.</strong> If iCloud Drive is enabled on your device, your data syncs to your private iCloud database. Apple encrypts it in transit and at rest. By default, Apple holds the keys (they don't access your data in practice but technically can). If you enable <strong>Advanced Data Protection</strong> in iOS Settings, the data becomes end-to-end encrypted &mdash; only your devices can decrypt it. You can disable sync entirely by signing out of iCloud or turning off iCloud Drive for this app.
+      </li>
+      <li>
+        <strong>Siri.</strong> When you say <em>"Hey Siri, add..."</em>, the audio is processed by Siri. On supported hardware (iPhone with A12 Bionic and later, iOS 15+), many requests are transcribed on-device; for others, audio is sent to Apple's Siri servers. This is iOS-wide behavior, not specific to this app. Manage it in iOS Settings &rarr; Siri &amp; Search.
+      </li>
+      <li>
+        <strong>Push for sync.</strong> If you have multiple devices, Apple's silent push notification system tells the app when to fetch new data. The notifications themselves carry no content.
+      </li>
+    </ul>
+    <p class="callout">
+      Apple is the platform vendor &mdash; using iCloud sync means trusting Apple's privacy promises. See <a href="https://support.apple.com/en-us/HT202303">Apple's iCloud security overview</a>.
+    </p>
+
+    <h2>What goes to third parties</h2>
+    <ul>
+      <li>
+        <strong>Open Food Facts</strong> (only when you scan a barcode and have <em>"Look up product names online"</em> enabled in Settings). Only the barcode digits are sent over HTTPS to <code>world.openfoodfacts.org</code>, a non-profit community database. We do not include any identifier &mdash; no Apple ID, no device ID, no account info.
+      </li>
+      <li>
+        Once you've saved a name for a barcode locally, the app never re-fetches it. You can disable online lookups entirely in Settings.
+      </li>
+    </ul>
+    <p>
+      Open Food Facts is the only third-party service this app contacts. See their <a href="https://world.openfoodfacts.org/privacy">privacy policy</a>.
+    </p>
+
+    <h2>What we (the developer) collect</h2>
+    <p>
+      <strong>Nothing.</strong> There is no developer-side server, no analytics SDK, no crash reporter, no usage telemetry. We don't run a backend. We have no way to find out anything about how you use this app, what's on your lists, or even that you've installed it.
+    </p>
+    <p>
+      The only ways to share your data outside your devices are the ones above (Apple iCloud, Apple Siri, Open Food Facts), and you control each one with the toggles in iOS Settings or in this app's Settings tab.
+    </p>
+
+    <h2>Children's privacy</h2>
+    <p>
+      This app is rated 4+ and is suitable for all ages. We do not knowingly collect personal information from anyone, including children. Because we don't have a server and don't collect data, there is no special data-collection practice for users under 13.
+    </p>
+
+    <h2>Changes to this policy</h2>
+    <p>
+      If this policy changes, the new version will be published here with an updated effective date. Material changes will also be noted in the app's release notes.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy can be sent to <a href="mailto:charlief@gmail.com">charlief@gmail.com</a>.
+    </p>
+
+    <footer>
+      <p>&copy; 2026 Charlie Faulkner. GroceryListing is a personal-developer project.</p>
+    </footer>
+  </main>
+</body>
+</html>
